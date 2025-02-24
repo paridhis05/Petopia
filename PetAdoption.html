@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="petcss.css">
+</head>
+<body>
+
+    <!-- ------------------------ FIRST-NAVIGATION BAR ---------------------------- -->
+	
+	<nav class="navbar1">
+
+		<!-- ------------------  SEARCH BOX -------------------- -->
+		
+			<div class="navbar1-left">
+				<div class="search-box">
+						<input type="text" placeholder="What are you looking for?">
+						<i class="fa-solid fa-magnifying-glass"></i>  
+				</div>
+			</div>
+		
+		<!-- ------------------  LOGO -------------------- -->
+		
+			<div class="navbar1-center">
+				<a href="pet.html"><img src="images\PetopiaLogo.png" class="logo"></a>
+		
+			</div>
+		
+		<!-- ------------------ SUPPORT AND CART BUTTON -------------------- -->
+		
+			<div class="navbar1-right">
+				
+				<div class="nav-right-button">
+				   <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+				   <a href="#" class="support"><i class="fa-solid fa-cart-shopping"></i></a>
+				</div>
+		
+			</div>
+		
+	</nav>
+		
+	<!-- ------------------  SECOND-NAVIGATION BAR -------------------- -->
+		
+	<nav class="navbar2">
+
+		<ul>
+            <li><a href="pet.html" class="active-link"> <span> Home</span> </a></li>
+            <li><a href="PetAdoption.html"><span> Pets</span></a></li>
+            <li><a href="PetShopping.html"><span> Accessories</span>  </a></li>
+            <li><a href="#"><span> Services</span> </a></li>
+            <li><a href="ReportAbuse.html"><span> Rescue a pet</span> </a></li>
+            <li><a href="#"><span> About us</span></a></li>
+        </ul>
+		
+	</nav>
+
+	<!-- ------------------ ADOPTION HERO-SECTION  -------------------- -->
+
+	<div class="hero-dog" style="background: url('images/hero-adoption-section.png') no-repeat center center/cover;">
+        <div class="hero-dog-overlay"></div>
+        <div class="hero-dog-content">
+            <!-- <h1>Fresh & Fluffy: </h1> -->
+            <p>Re-Home and Adopt <br><em style="color: #dda6f5;">a Pet in India</em></p>
+
+                <button onclick="window.location.href='ReportAbuse.html'" style="background-color: #e8c846;">Adopt a Pet</button>
+        </div>
+    </div>
+
+    <!-- --------------------  DIV 1  --------------------- -->
+<section class="grooming-div1">
+	<div class="div1-image-container">
+		<img src="images/adoption-div1.png" alt="Pet Grooming Illustration">
+	</div>
+	<div class="div1-content-container">
+		<h2 style="color: #533d29;">Your Pet Adoption Journey With Petopia</h2>
+		<ul>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-magnifying-glass" style="color: #926045;"></i></div>
+				<div class="text">
+					<strong>Search Pet</strong>
+                    Adopt a dog or cat who's right for you. Simply enter your city above to start your search.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-link" style="color: #926045;"></i></div>
+				<div class="text">
+					<strong>Connect</strong>
+					Once you find a pet, click "show number" to get contact info for their pet parent or rescue. Contact them to learn more about how to meet and adopt the pet.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-paw" style="color: #926045;"></i></div>
+				<div class="text">
+					<strong>AdoptLove</strong>
+					The rescue or pet parents will walk you through their adoption process. Prepare your home for the arrival of your fur baby to help them adjust to their new family.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons" style="padding: 16px 18px;"><i class="fa-solid fa-syringe" style="color: #926045;"></i></div>
+				<div class="text">
+					<strong>Free Vet Consultation</strong>
+					ThePetNest will help your pet to settle down in its new home, once you complete the Adoption journey reach out to us for free vet consultation.
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- ------------------ DONATION SECTION  -------------------- -->
+
+<div class="donation-section">
+    <h2>Help make a difference, share the love</h2>
+    <div class="donation-container">
+      <div class="donation-image">
+        <img 
+          src="images/donation-section.jpg"
+          alt="Street Animals"
+        />
+      </div>
+
+      <div class="donation-panel">
+        <h2>Choose an amount to donate</h2>
+        <div class="donation-amounts">
+          <button>₹50</button>
+          <button>₹100</button>
+          <button>₹250</button>
+          <button>₹500</button>
+          <button>₹1000</button>
+        </div>
+        <button class="donate-btn">Donate Now</button>
+        <p>Receive tax benefits by donating to this cause.</p>
+      </div>
+    </div>
+
+    <p class="donation-note">
+      Your contributions can positively impact the lives of numerous street animals. 
+      Kindly make a donation to support those in need.
+    </p>
+  </div>
+
+  <script>
+    // Optional JS to toggle 'active' class on clicked donation buttons
+    const amountButtons = document.querySelectorAll('.donation-amounts button');
+    amountButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        amountButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
+<!-- ------------------ FAQs (Frequently Asked Questions) ------------------- -->
+
+<div class="tech-block-faq">
+    <div class="faq-container">
+        <h1 class="faq-header">Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">
+                Why Should You Adopt a Dog or Cat?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Did you know that over 2000 people per hour in India run a search right here looking to adopt a pet? Pet adoption is becoming the preferred way to find a new pet. Adoption will always be more convenient than buying a puppy for sale from a pet shop or finding a kitten for sale from a litter. Pet adoption brings less stress and more savings! So what are you waiting for? Go find that perfect pet for home!
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				What is the fee to adopt a pet?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                No, there is no fee for pet adoption on Petopia. However, if you adopt from a different city pet owner/rescuer can ask for travel charges.
+            </div>
+        </div>
+        <div class="faq-item"> 
+            <div class="faq-question">
+                How old do I need to be to adopt a pet?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                You need to be at least 18+ years old to adopt.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				Can you return an adopted pet?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                We understand it can be hard to get an adjusted pet in the new home and vice versa, as long as your reason for returning is reasonable, you'll be welcome to put it up for adoption again.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // JavaScript to handle FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+
+    <!-- ------------------------------------ FOOTER ------------------------------------- -->
+
+	<footer>
+		<div class="footer1">
+			<div class="divf1">
+				<ul>
+				<li><h3>PETOPIA</h3></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Career</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="PetShopping.html">Online Pet Shop</a></li>
+				<li><a href="#">Customer reviews</a></li>
+				<li><a href="ReportAbuse.html">Report Animal Abuse</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			</div>
+	
+			<div class="divf2">
+				<ul>
+				<li><h3>SERVICES</h3></li>
+				<li><a href="PetGrooming.html">Pet Grooming</a></li>
+				<li><a href="PetTraining.html">Dog training</a></li>
+				<li><a href="PetWalking.html">Dog Walking</a></li>
+				<li><a href="PetWalking.html">Pet Sitting</a></li>
+				<li><a href="PetHealth.html">Pet Insurance</a></li>
+				<li><a href="PetAdoption.html">Pet Adoption</a></li>
+				<li><a href="#">Courses</a></li>
+				<li><a href="PetHealth.html">Online Vet Consultation</a></li>
+				</ul>
+			</div>
+	
+			<div class="divf3">
+				<ul>
+				<li><h3>POLICIES</h3></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Refund Policy</a></li>
+				<li><a href="#">Cancellation Policy</a></li>
+				<li><a href="#">Shipping Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="divf4">
+			</div>
+			
+		</div>
+	
+		<div class="footer2">
+			<p>&copy; 2022 Pet Services. All rights reserved.</p>
+		</div>
+		</footer>
+</body>
+</html>

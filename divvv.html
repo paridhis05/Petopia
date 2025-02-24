@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Pet Training</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .pet-explore {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .pet-explore h2 {
+      font-size: 44px;
+      color: #4e1489;
+      margin-bottom: 40px;
+    }
+
+    .scroll-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .explore-block {
+      /* max-width: 1300px; */
+      display: flex;
+      align-items: center;
+      gap: 3%;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none; 
+      scrollbar-width: none;  
+    }
+    .explore-block::-webkit-scrollbar {
+      display: none;      
+    }
+
+    .block {
+      flex: 0 0 auto;    
+      margin-top: 10px;
+      background: #edf8ff;
+      color: #277fa7;
+      width: 10%;
+      min-width: 140px;  
+      height: auto;
+      padding: 15px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .block img {
+      width: 70px;
+      object-fit: cover;
+      margin: 10px;
+    }
+
+    .block h3 {
+      font-size: 16px;
+      margin: 5px 0;
+      padding: 5px 12%;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffffff;
+      color: #661d69;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-btn:hover {
+      background-color: #3b0e68;
+    }
+
+    .scroll-btn.left {
+      left: 0;
+    }
+
+    .scroll-btn.right {
+      right: 0;
+    }
+
+    .book-now-btn {
+      background-color: #ff9f43;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 50px;
+    }
+    .book-now-btn:hover {
+      background-color: #e08f3c;
+    }
+
+    @media (max-width: 768px) {
+      .block {
+        width: 30%;
+        min-width: 120px;
+      }
+      .pet-explore h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ------------------ EXPLORE PET WALKING OPTION  ------------------- -->
+  <div class="pet-explore">
+    <h2>Receive Reliable Guidance for Your Pet's Health Needs</h2>
+    <div class="scroll-container">
+      <button class="scroll-btn left" onclick="scrollLeft()" style="margin-right:50px;"><i class="fa-solid fa-angle-left"></i></button>
+      <div class="explore-block" id="scrollable">
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore1.png" alt="One Time Walk">
+          <h3>General Checkup</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore2.png" alt="Two Time Walk">
+          <h3>New Pet Parent</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore3.png" alt="Three Time Walk">
+          <h3>Skin issues</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore4.png" alt="Per Day Walk">
+          <h3>Digestive issues</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore5.png" alt="Weekly Walk">
+          <h3>Paws & Limbs</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore6.png" alt="Monthly Walk">
+          <h3>Dental issues</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore1.png" alt="One Time Walk">
+          <h3>Ears issues</h3>
+        </div>
+        <div class="block" style="background-color: #faf6ff;">
+          <img src="images/walking-explore2.png" alt="Two Time Walk">
+          <h3>Eye issues</h3>
+        </div>
+      </div>
+      <button class="scroll-btn right" onclick="scrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <button class="book-now-btn">Book Now</button>
+  </div>
+  
+
+  <script>
+    function scrollLeft() {
+      const container = document.getElementById('scrollable');
+      container.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      const container = document.getElementById('scrollable');
+      container.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

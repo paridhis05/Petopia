@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="petcss.css">
+</head>
+<body>
+
+    <!-- ------------------------ FIRST-NAVIGATION BAR ---------------------------- -->
+	
+	<nav class="navbar1">
+
+		<!-- ------------------  SEARCH BOX -------------------- -->
+		
+			<div class="navbar1-left">
+				<div class="search-box">
+						<input type="text" placeholder="What are you looking for?">
+						<i class="fa-solid fa-magnifying-glass"></i>  
+				</div>
+			</div>
+		
+		<!-- ------------------  LOGO -------------------- -->
+		
+			<div class="navbar1-center">
+				<a href="pet.html"><img src="images\PetopiaLogo.png" class="logo"></a>
+		
+			</div>
+		
+		<!-- ------------------ SUPPORT AND CART BUTTON -------------------- -->
+		
+			<div class="navbar1-right">
+				
+				<div class="nav-right-button">
+				   <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+				   <a href="#" class="support"><i class="fa-solid fa-cart-shopping"></i></a>
+				</div>
+		
+			</div>
+		
+	</nav>
+		
+	<!-- ------------------  SECOND-NAVIGATION BAR -------------------- -->
+		
+	<nav class="navbar2">
+
+		<ul>
+            <li><a href="pet.html" class="active-link"> <span> Home</span> </a></li>
+            <li><a href="PetAdoption.html"><span> Pets</span></a></li>
+            <li><a href="PetShopping.html"><span> Accessories</span>  </a></li>
+            <li><a href="#"><span> Services</span> </a></li>
+            <li><a href="ReportAbuse.html"><span> Rescue a pet</span> </a></li>
+            <li><a href="#"><span> About us</span></a></li>
+        </ul>
+		
+	</nav>
+
+	<!-- ------------------ PET SHOPPING HERO-SECTION  -------------------- -->
+
+	<div class="hero-dog" style="background: url('images/hero-shopping-section.png') no-repeat center center/cover;">
+        <div class="hero-dog-overlay"></div>
+        <div class="hero-dog-content">
+            <!-- <h1>Fresh & Fluffy: </h1> -->
+            <p>Spoil & Style: <br> Exclusive Pet Shopping <em style="color: #a40c0c;"> Deals! </em></p>
+
+                <button onclick="redirectToPackage()" style="background-color: #66bbd0;">Book Now</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPackage() {
+            const petType = document.getElementById('pet-select').value;
+            const baseUrl = 'package.html'; // Replace with your actual package URL
+            window.location.href = `${baseUrl}?pet=${petType}`;
+        }
+    </script>
+
+<!-- ------------------ SHOP BY PET SECTION  -------------------- -->
+
+<div class="shop-by-pet-section">
+    <h1>LET'S SHOP BY PET</h1>
+    <div class="pet-items">
+        <div class="pet-item">
+            <a href="#">
+                <img src="images/ShopByPet1.png" alt="Dogs">
+                <span>Dogs</span>
+            </a>
+        </div>
+        <div class="pet-item">
+            <a href="#">
+                <img src="images/ShopByPet2.png" alt="Cats">
+                <span>Cats</span>
+            </a>
+        </div>
+        <div class="pet-item">
+            <a href="#">
+                <img src="images/ShopByPet3.png" alt="Birds">
+                <span>Birds</span>
+            </a>
+        </div>
+        <div class="pet-item">
+            <a href="#">
+                <img src="images/ShopByPet4.png" alt="Fishes">
+                <span>Fishes</span>
+            </a>
+        </div>
+        <div class="pet-item">
+            <a href="#">
+                <img src="images/ShopByPet5.png" alt="Small pets">
+                <span>Small pets</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------ ALL-IN-ONE PET CARE SECTION  -------------------- -->
+
+<div class="allInOne">
+	<h1>ALL-IN-ONE PET CARE HUB</h1>
+	<div class="allInOne-items">
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne1.png" alt="Toys">
+			<h3>Toys</h3>
+			<a href="#toys">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne2.png" alt="Accessories">
+			<h3>Accessories</h3>
+			<a href="#accessories">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne3.png" alt="Treats">
+			<h3>Treats</h3>
+			<a href="#treats">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne4.png" alt="Clothes">
+			<h3>Clothes</h3>
+			<a href="#clothes">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne5.png" alt="Pharmacy">
+			<h3>Pharmacy</h3>
+			<a href="#pet-pharmacy">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne6.png" alt="Grooming Tools">
+			<h3>Grooming Tools</h3>
+			<a href="#">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne7.png" alt="Bowls">
+			<h3>Bowls</h3>
+			<a href="#">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne8.png" alt="Beds">
+			<h3>Beds</h3>
+			<a href="#">SHOP NOW</a>
+		</div>
+		<div class="pet-care-item">
+			<img src="images/shop-allInOne9.png" alt="Custom">
+			<h3>Custom</h3>
+			<a href="#custom">SHOP NOW</a>
+		</div>
+	</div>
+</div>
+
+<!-- ------------------ PHARMACY PRODUCT SECTION  -------------------- -->
+<div class="pet-pharmacy">
+	<h1>Pet Pharmacy</h1>
+	<button class="scroll-button left" onclick="scrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+	<div class="scroll-container">
+		<div class="pet-pharmacy-items" id="scrollable-pharmacy">
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section1.jpg" alt="Tick & Flea Control">
+				<h3>Tick & Flea Control</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section2.jpg" alt="Dewormer">
+				<h3>Dewormer</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section3.jpg" alt="Supplements">
+				<h3>Supplements</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section4.jpg" alt="Skin Care">
+				<h3>Skin Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section5.jpg" alt="Joint Care">
+				<h3>Joint Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section6.jpg" alt="Digestive Care">
+				<h3>Digestive Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section7.jpg" alt="Cardiac Care">
+				<h3>Cardiac Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section8.jpg" alt="Respiratory Care">
+				<h3>Respiratory Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section9.jpg" alt="Kidney Care">
+				<h3>Kidney Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section10.jpg" alt="Eye & Ear Care">
+				<h3>Eye & Ear Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section11.jpg" alt="Liver Care">
+				<h3>Liver Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section12.jpg" alt="Antifungals">
+				<h3>Antifungals</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section13.jpg" alt="Oral Care">
+				<h3>Oral Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pharmacy-section14.jpg" alt="Wound Care">
+				<h3>Wound Care</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+		</div>
+	</div>
+	<button class="scroll-button right" onclick="scrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+</div>
+
+<script>
+	function scrollLeft() {
+		const container = document.getElementById('scrollable-pharmacy');
+		container.scrollBy({ left: -300, behavior: 'smooth' });
+	}
+
+	function scrollRight() {
+		const container = document.getElementById('scrollable-pharmacy');
+		container.scrollBy({ left: 300, behavior: 'smooth' });
+	}
+</script>
+
+<!-- ------------------ CLOTHES PET PRODUCT SECTION  -------------------- -->
+<div class="pet-pharmacy clothes">
+	<h1>PET CLOTHING</h1>
+	<button class="scroll-button left" onclick="scrollLeft3()"><i class="fa-solid fa-angle-left"></i></button>
+	<div class="scroll-container">
+		<div class="pet-pharmacy-items" id="scrollable-clothes">
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing1.png" alt="Occasion Wear">
+				<h3>Occasion Wear</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing2.png" alt="Hoodies">
+				<h3>Hoodies</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing3.png" alt="Jackets">
+				<h3>Jackets</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing4.png" alt="Sweaters">
+				<h3>Sweaters</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing5.png" alt="T-shirts">
+				<h3>T-shirts</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-clothing6.png" alt="Bandanas">
+				<h3>Bandanas</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+		</div>
+	</div>
+	<button class="scroll-button right" onclick="scrollRight3()"><i class="fa-solid fa-angle-right"></i></button>
+</div>
+
+<script>
+	function scrollLeft3() {
+		const container = document.getElementById('scrollable-clothes');
+		container.scrollBy({ left: -300, behavior: 'smooth' });
+	}
+
+	function scrollRight3() {
+		const container = document.getElementById('scrollable-clothes');
+		container.scrollBy({ left: 300, behavior: 'smooth' });
+	}
+</script>
+
+<!-- ----------------------- SHOP BY BRAND SECTION ----------------------- -->
+<div class="pet-shopping-brands">
+<h1>Shop By Brands</h1>
+	<div class="div4">
+		<div class="brand"><img src="images\royal.png"></div>
+		<div class="brand"><img src="images\drools.png"></div>
+		<div class="brand"><img src="images\pedigree.png"></div>
+		<div class="brand"><img src="images\whiskas.png"></div>
+		<div class="brand"><img src="images\himalaya.png"></div>
+	</div>
+</div>
+
+<!-- ------------------ PET PERSONALIZED PRODUCT SECTION (CUSTOM)  -------------------- -->
+<div class="pet-pharmacy custom">
+	<h1 style="color: #e4bd1f;">Pet Personalized Products</h1>
+	<button class="scroll-button left" onclick="scrollLeft2()"><i class="fa-solid fa-angle-left"></i></button>
+	<div class="scroll-container">
+		<div class="pet-pharmacy-items" id="scrollable-custom">
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom1.png" alt="Tick & Flea Control">
+				<h3>Name Tags</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom2.png" alt="Dewormer">
+				<h3>Beds</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom3.png" alt="Supplements">
+				<h3>Mats</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom4.png" alt="Skin Care">
+				<h3>Cushions</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom5.png" alt="Joint Care">
+				<h3>Collars & Leashes</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom6.png" alt="Digestive Care">
+				<h3>Bandanas & Bow Ties</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom7.png" alt="Cardiac Care">
+				<h3>Special Occasion Wear</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="pet-pharmacy-item">
+				<img src="images/pet-custom8.png" alt="Respiratory Care">
+				<h3>Diners</h3>
+				<a href="#">SHOP NOW</a>
+			</div>
+		</div>
+	</div>
+	<button class="scroll-button right" onclick="scrollRight2()"><i class="fa-solid fa-angle-right"></i></button>
+</div>
+
+<script>
+	function scrollLeft2() {
+		const container = document.getElementById('scrollable-custom');
+		container.scrollBy({ left: -300, behavior: 'smooth' });
+	}
+
+	function scrollRight2() {
+		const container = document.getElementById('scrollable-custom');
+		container.scrollBy({ left: 300, behavior: 'smooth' });
+	}
+</script>
+
+
+
+<!-- ------------------ FAQs (Frequently Asked Questions) ------------------- -->
+
+<div class="tech-block-faq">
+    <div class="faq-container">
+        <h1 class="faq-header">Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">
+                What are Some of the Globally Renowned Pet Food Brands Available at Petopia?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Some of the most sought-after pet food brands at Petopia are Royal Canin, Farmina, Pedigree, Farmina, Hills Pet, Taste of the Wild, Orijen, IAMS, Whiskas, Bellotta, MeO, Sheba etc. All these brands design diets having a nutritional profile which is ideal for bolstering the overall health of your lovely pets.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				What All Basic Pet Supplies You Can Avail From Petopia ?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                If you are owning a pet, you will need several basic supplies to instil excellent health in them. You name the pet supplies, we at PetsWorld have them all. Some of the essential pet supplies available at PetsWorld are Nutritious Diets, Healthy Treats, Grooming Tools, Good Prescription Foods, Mentally Stimulating Toys, Clothes, Beds, Crates, Cages and Barriers etc. These items play a crucial role in safeguarding your pet's overall health.
+            </div>
+        </div>
+        <div class="faq-item"> 
+            <div class="faq-question">
+                What Supplies Do I Need For New Puppies ?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                As puppies are highly energetic in nature, you need some high quality toys to keep them engaged. Also as they are voracious eaters, they need highly nutritious foods to grow into a healthy and energetic adult dog. You can grab them all at PetsWorld at exciting deals.
+			</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				Which Food Should I Feed My Cats, Dry Foods or Gravy Foods?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Both dry foods and gravy foods have their own benefits and both of them are nutritionally wholesome for felines. However, as cats are generally picky eaters, gravy foods may tempt them more than dry cat foods. At PetsWorld, you can check out some of the top-notch gravy food brands like Royal Canin, Whiskas, Me-O, Bellotta, Sheba etc. Gravy foods not only elevate the overall health of your cats, but also keep them thoroughly hydrated in the scorching heat of the summers.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                Do Petopia Deliver Their Products All Over India?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                An emphatic yes! Once you have ordered any products from us, we will try to make the items get delivered at your doorsteps at the earliest, anywhere in India. Petsworld is now delivering its products to almost 25000 pin codes all in India and we strive to reach even the remotest areas of the country.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+    <!-- ------------------------------------ FOOTER ------------------------------------- -->
+
+	<footer>
+		<div class="footer1">
+			<div class="divf1">
+				<ul>
+				<li><h3>PETOPIA</h3></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Career</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="PetShopping.html">Online Pet Shop</a></li>
+				<li><a href="#">Customer reviews</a></li>
+				<li><a href="ReportAbuse.html">Report Animal Abuse</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			</div>
+	
+			<div class="divf2">
+				<ul>
+				<li><h3>SERVICES</h3></li>
+				<li><a href="PetGrooming.html">Pet Grooming</a></li>
+				<li><a href="PetTraining.html">Dog training</a></li>
+				<li><a href="PetWalking.html">Dog Walking</a></li>
+				<li><a href="PetWalking.html">Pet Sitting</a></li>
+				<li><a href="PetHealth.html">Pet Insurance</a></li>
+				<li><a href="PetAdoption.html">Pet Adoption</a></li>
+				<li><a href="#">Courses</a></li>
+				<li><a href="PetHealth.html">Online Vet Consultation</a></li>
+				</ul>
+			</div>
+	
+			<div class="divf3">
+				<ul>
+				<li><h3>POLICIES</h3></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Refund Policy</a></li>
+				<li><a href="#">Cancellation Policy</a></li>
+				<li><a href="#">Shipping Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="divf4">
+			</div>
+			
+		</div>
+	
+		<div class="footer2">
+			<p>&copy; 2022 Pet Services. All rights reserved.</p>
+		</div>
+		</footer>
+</body>
+</html>

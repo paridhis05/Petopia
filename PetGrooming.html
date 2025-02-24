@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pet Grooming</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="petcss.css">
+</head>
+<body>
+
+	<!-- ------------------------ FIRST-NAVIGATION BAR ---------------------------- -->
+	
+	<nav class="navbar1">
+
+		<!-- ------------------  SEARCH BOX -------------------- -->
+		
+			<div class="navbar1-left">
+				<div class="search-box">
+						<input type="text" placeholder="What are you looking for?">
+						<i class="fa-solid fa-magnifying-glass"></i>  
+				</div>
+			</div>
+		
+		<!-- ------------------  LOGO -------------------- -->
+		
+			<div class="navbar1-center">
+				<a href="pet.html"><img src="images\PetopiaLogo.png" class="logo"></a>
+		
+			</div>
+		
+		<!-- ------------------ SUPPORT AND CART BUTTON -------------------- -->
+		
+			<div class="navbar1-right">
+				
+				<div class="nav-right-button">
+				   <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+				   <a href="#" class="support"><i class="fa-solid fa-cart-shopping"></i></a>
+				</div>
+		
+			</div>
+		
+	</nav>
+		
+	<!-- ------------------  SECOND-NAVIGATION BAR -------------------- -->
+		
+	<nav class="navbar2">
+
+		<ul>
+            <li><a href="pet.html" class="active-link"> <span> Home</span> </a></li>
+            <li><a href="PetAdoption.html"><span> Pets</span></a></li>
+            <li><a href="PetShopping.html"><span> Accessories</span>  </a></li>
+            <li><a href="#"><span> Services</span> </a></li>
+            <li><a href="ReportAbuse.html"><span> Rescue a pet</span> </a></li>
+            <li><a href="#"><span> About us</span></a></li>
+        </ul>
+		
+	</nav>
+
+	<!-- ------------------  GROOMING HERO-SECTION  -------------------- -->
+
+	<div class="hero"style="background: url('images/grooming-hero1.png') no-repeat center center/cover;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="color: #533829;">Groomers Give Pets Their Glow!</h1>
+            <p style="color: #472918;">"With gentle care and a loving touch, we make every pet shine so much!"</p>
+
+            <div class="form-container">
+                <select id="pet-select">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="redirectToPackage()">View Package</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPackage() {
+            const petType = document.getElementById('pet-select').value;
+            const baseUrl = 'package.html'; // Replace with your actual package URL
+            // location.href = `DogGrooming.html`;
+            if(petType=="dog"){
+				location.href = `DogGrooming.html`;
+            }
+			else{
+				location.href = `CatGrooming.html`;
+			}
+        }
+    </script>
+	
+
+<!-- ---------------------------- Content of the Home Page ------------------------------------------- -->
+
+<!-- --------------------  DIV 1  --------------------- -->
+<section class="grooming-div1">
+	<div class="div1-image-container">
+		<img src="images/grooming-div1.jpg" alt="Pet Grooming Illustration">
+	</div>
+	<div class="div1-content-container">
+		<h2 style="color: #533829;">Our Handpicked Groomers Meet Your Pet Needs</h2>
+		<ul>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-star"></i></div>
+				<div class="text">
+					<strong>Book a Top Rated Groomer Near You</strong>
+					Find a dog groomer nearby, select the best groomer based on budget and top ratings.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-box-archive"></i></div>
+				<div class="text">
+					<strong>Personalized Grooming Packages</strong>
+					Customize your dog grooming packages to match your pet's needs.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-scissors"></i></div>
+				<div class="text">
+					<strong>Groomer With Full Accessories</strong>
+					Just relax! Professional pet groomers bring all the necessary grooming equipment.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons" style="padding: 16px 18px;"><i class="fa-solid fa-location-dot"></i></div>
+				<div class="text">
+					<strong>Grooming Service at Your Place</strong>
+					Enjoy the convenience of in-home grooming, reducing travel stress for your pet.
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- --------------------  DIV 2  --------------------- -->
+
+<div class="grooming-div2">
+	<h1>Explore Dog Grooming Options for Your Pet</h1>
+<div class="blocks-container">
+	<div class="block" style="background-color: #4e4468;">
+		<div class="text-container">
+			<div class="top-word">Spa Bath</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options1.png" alt="Regular Wash">
+	</div>
+	<div class="block" style="background-color: #dac4ab;">
+		<div class="text-container">
+			<div class="top-word">Full Grooming</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options7.png" alt="Full Grooming">
+	</div>
+	<div class="block" style="background-color: #af6f91;">
+		<div class="text-container">
+			<div class="top-word">Hair Cut</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options9.png" alt="Barking Wash">
+	</div>
+	<div class="block" style="background-color: #e696bb;">
+		<div class="text-container">
+			<div class="top-word">Anti-Tick Treatment</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options11.png" alt="Full Grooming">
+	</div>
+	<div class="block" style="background-color: #3b2c26;">
+		<div class="text-container">
+			<div class="top-word">Body Masaage</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options10.png" alt="Barking Wash">
+	</div>
+	<div class="block" style="background-color: #e9e6b9;">
+		<div class="text-container">
+			<div class="top-word">Knots/Mats Removal</div>
+			<a href="#" class="btn">Book Now</a>
+		</div>
+		<img src="images/options6.png" alt="Barking Wash">
+	</div>
+</div>
+</div>
+
+<!-- --------------------  DIV 3  --------------------- -->
+<section class="guarantee-div3">
+	<h2>Happiness Guarantee</h2>
+	<div class="guarantee-container-div3">
+		<div class="blocks-div3">
+			<ul>
+				<li class="left-list">
+					<div class="div3-icons">
+					<i class="fa-solid fa-shield-halved"></i></div>
+					<div class="text">
+						<strong>Secure Payment</strong>
+						Funds are held until the job is completed.
+					</div>
+				</li>
+				<li class="left-list">
+					<div class="div3-icons">
+					<i class="fa-solid fa-wallet"></i></div>
+					<div class="text">
+						<strong>Pay As You Go</strong>
+						Flexible payment options available.
+					</div>
+				</li>
+				<li class="left-list">
+					<div class="div3-icons list">
+					<i class="fa-solid fa-sack-dollar"></i></div>
+					<div class="text">
+						<strong>Industry Lowest Prices</strong>
+						Best value for pet parents.
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="image-box">
+			<img id="changing-image" src="images/happiness-grooming1.png" alt="Changing Image">
+		</div>
+		<div class="blocks-div3">
+			<ul>
+				<li>
+					<div class="div3-icons list">
+					<i class="fa-solid fa-certificate"></i></div>
+					<div class="text">
+						<strong>Verified Pet Masters</strong>
+						Trained and certified professionals.
+					</div>
+				</li>
+				<li>
+					<div class="div3-icons list">
+					<i class="fa-solid fa-box-archive"></i></div>
+					<div class="text">
+						<strong>Customized Packages</strong>
+						Tailored to your pet's needs.
+					</div>
+				</li>
+				<li>
+					<div class="div3-icons">
+					<i class="fa-solid fa-comments"></i></div>
+					<div class="text">
+						<strong>Mobile App Service Tracking</strong>
+						Manage bookings and payments easily.
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<script>
+	const images = ["images/happiness-grooming1.png", "images/happiness-grooming2.png", "images/happiness-grooming3.png"];
+	let index = 0;
+
+	function changeImage() {
+		index = (index + 1) % images.length;
+		document.getElementById("changing-image").src = images[index];
+	}
+
+	setInterval(changeImage, 3000);
+</script>
+
+
+<!-- ------------------ FAQs (Frequently Asked Questions) ------------------- -->
+
+<div class="tech-block-faq">
+    <div class="faq-container">
+        <h1 class="faq-header">Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">
+                What if I want the same groomer each time?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Petsfolio strives its best to accommodate customized requirements like this as many pet parents prefer the same groomer each time. This indeed works best when it comes to building a positive relationship between the pet parent, groomer and pet especially if your pet gets nervous while grooming.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				Why should I choose Petsfolio over other grooming service providers?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Petsfolio focuses on offering the finest grooming experience possible with the most quality-focused yet affordable pet grooming services. All the pet groomers are trained to provide exceptional attention and care for pets of all sizes and shapes with the help of the most advanced and highest quality equipment. As a pet parent whatever you need your pet to be whether bathed, styled, trimmed, Petsfolio pet groomer services have got you covered.
+            </div>
+        </div>
+        <div class="faq-item"> 
+            <div class="faq-question">
+                What are the benefits of dog grooming?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Regular baths, brushing, dental hygiene,hair-cutting, nail-cutting and more are essential to the health of the skin andcoat of your pet. Where regular baths prevent bad odour by loosening dirt,other grooming services enhance a sense of overall wellness in your pet.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				Can professional pet groomers groom my dog to the breed standard?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                When you choose to rely on pet grooming services offered by a reputed firm like Petsfoilio, you can rest assured that the pet groomers will be familiar with most of the breed standards. Moreover, regular grooming also helps you maintain the grooming to the breed standard.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                Is it necessary to hire professional groomers for my pet grooming?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Though it is not necessary a hectic lifestyle should not be a reason for you to put up with a stinky pet. The rise of professional pet grooming services indicates that the majority of pet parents are now choosing to rely on professional pet grooming services. The experienced groomers trained in advanced grooming sessions such as bathing, brushing, nail polishing, teeth polishing and more help your pet to lead a healthy and pleasant life.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // JavaScript to handle FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+
+<!-- ------------------------------------ FOOTER ------------------------------------- -->
+
+<footer>
+	<div class="footer1">
+		<div class="divf1">
+			<ul>
+			<li><h3>PETOPIA</h3></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Career</a></li>
+			<li><a href="#">Support</a></li>
+			<li><a href="PetShopping.html">Online Pet Shop</a></li>
+			<li><a href="#">Customer reviews</a></li>
+			<li><a href="ReportAbuse.html">Report Animal Abuse</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+		</div>
+
+		<div class="divf2">
+			<ul>
+			<li><h3>SERVICES</h3></li>
+			<li><a href="PetGrooming.html">Pet Grooming</a></li>
+			<li><a href="PetTraining.html">Dog training</a></li>
+			<li><a href="PetWalking.html">Dog Walking</a></li>
+			<li><a href="PetWalking.html">Pet Sitting</a></li>
+			<li><a href="PetHealth.html">Pet Insurance</a></li>
+			<li><a href="PetAdoption.html">Pet Adoption</a></li>
+			<li><a href="#">Courses</a></li>
+			<li><a href="PetHealth.html">Online Vet Consultation</a></li>
+			</ul>
+		</div>
+
+		<div class="divf3">
+			<ul>
+			<li><h3>POLICIES</h3></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Refund Policy</a></li>
+			<li><a href="#">Cancellation Policy</a></li>
+			<li><a href="#">Shipping Policy</a></li>
+			<li><a href="#">Terms & Conditions</a></li>
+		    </ul>
+		</div>
+		<div class="divf4">
+		</div>
+		
+	</div>
+
+	<div class="footer2">
+        <p>&copy; 2022 Pet Services. All rights reserved.</p>
+    </div>
+    </footer>	
+</body>
+</html>

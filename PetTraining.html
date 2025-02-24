@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pet Training</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="petcss.css">
+</head>
+<body>
+
+	<!-- ------------------------ FIRST-NAVIGATION BAR ---------------------------- -->
+	
+	<nav class="navbar1">
+
+		<!-- ------------------  SEARCH BOX -------------------- -->
+		
+			<div class="navbar1-left">
+				<div class="search-box">
+						<input type="text" placeholder="What are you looking for?">
+						<i class="fa-solid fa-magnifying-glass"></i>  
+				</div>
+			</div>
+		
+		<!-- ------------------  LOGO -------------------- -->
+		
+			<div class="navbar1-center">
+				<a href="pet.html"><img src="images\PetopiaLogo.png" class="logo"></a>
+		
+			</div>
+		
+		<!-- ------------------ SUPPORT AND CART BUTTON -------------------- -->
+		
+			<div class="navbar1-right">
+				
+				<div class="nav-right-button">
+				   <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+				   <a href="#" class="support"><i class="fa-solid fa-cart-shopping"></i></a>
+				</div>
+		
+			</div>
+		
+	</nav>
+		
+	<!-- ------------------  SECOND-NAVIGATION BAR -------------------- -->
+		
+	<nav class="navbar2">
+
+		<ul>
+            <li><a href="pet.html" class="active-link"> <span> Home</span> </a></li>
+            <li><a href="PetAdoption.html"><span> Pets</span></a></li>
+            <li><a href="PetShopping.html"><span> Accessories</span>  </a></li>
+            <li><a href="#"><span> Services</span> </a></li>
+            <li><a href="ReportAbuse.html"><span> Rescue a pet</span> </a></li>
+            <li><a href="#"><span> About us</span></a></li>
+        </ul>
+		
+	</nav>
+
+	<!-- ------------------  TRAINING HERO-SECTION  -------------------- -->
+
+	<div class="hero"style="background: url('images/training-hero1.png') no-repeat center center/cover;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="color: #564681;">Find Expert Pet Trainers!</h1>
+            <p style="color: #4e4468;">"Book trusted trainers for a happier, well-trained pet!"</p>
+
+            <div class="form-container">
+                <select id="pet-select">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+                <button onclick="redirectToPackage()" class="hero-training-btn">Book Trainer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPackage() {
+            const petType = document.getElementById('pet-select').value;
+            const baseUrl = 'package.html'; // Replace with your actual package URL
+            // location.href = `DogGrooming.html`;
+            if(petType=="dog"){
+				location.href = `#`;
+            }
+			else{
+				location.href = `#`;
+			}
+        }
+    </script>
+	
+
+<!-- ---------------------------- Content of the Home Page ------------------------------------------- -->
+
+<!-- --------------------  DIV 1  --------------------- -->
+<section class="grooming-div1">
+	<div class="div1-image-container">
+		<img src="images/training-div1.png" alt="Pet Grooming Illustration">
+	</div>
+	<div class="div1-content-container">
+		<h2 style="color: #292e53;">Our Premium Training Features Match Your Pet Needs</h2>
+		<ul>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-star" style="color: #4da8c9;"></i></div>
+				<div class="text">
+					<strong>Book a Top Rated Trainer Near You</strong>
+					Share your needs, choose a reliable trainer based on budget and top ratings.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-solid fa-box-archive" style="color: #4da8c9;"></i></div>
+				<div class="text">
+					<strong>Customized Training Packages</strong>
+					Customize your training packages to match your pet's needs and budget.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons"><i class="fa-regular fa-calendar-days" style="color: #4da8c9;"></i></div>
+				<div class="text">
+					<strong>Training On Your Schedule</strong>
+					Select training sessions based on your schedule and convenience.
+				</div>
+			</li>
+			<li>
+				<div class="div1-icons" style="padding: 16px 18px;"><i class="fa-solid fa-location-dot" style="color: #4da8c9;"></i></div>
+				<div class="text">
+					<strong>Training at Your Place</strong>
+					Convenient in-home training to reduce stress for your pet and observe their progress.
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- ------------------ EXPLORE PET TRAINING  ------------------- -->
+<div class="pet-explore">
+    <h2 style="color: #0a4358;">Explore Dog Training Options for Your Pet</h2>
+    <div class="explore-block">
+        <div class="block">
+            <img src="images/training-explore1.png" alt="Obedience Training">
+            <h3>Obedience Training</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore2.png" alt="Puppy Training">
+            <h3>Puppy Training</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore3.png" alt="Behaviour Correction">
+            <h3>Behaviour Correction</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore4.png" alt="Guard Training">
+            <h3>Guard Training</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore5.png" alt="Agility Training">
+            <h3>Agility Training</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore6.png" alt="Tricks Training">
+            <h3>Tricks Training</h3>
+        </div>
+        <div class="block">
+            <img src="images/training-explore7.png" alt="Pet Therapy">
+            <h3>Pet Therapy</h3>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------  DIV 3  --------------------- -->
+<section class="guarantee-div3">
+	<h2>Happiness Guarantee</h2>
+	<div class="guarantee-container-div3">
+		<div class="blocks-div3">
+			<ul>
+				<li class="left-list">
+					<div class="div3-icons">
+					<i class="fa-solid fa-shield-halved"></i></div>
+					<div class="text">
+						<strong>Secure Payment</strong>
+						Funds are held until the job is completed.
+					</div>
+				</li>
+				<li class="left-list">
+					<div class="div3-icons">
+					<i class="fa-solid fa-wallet"></i></div>
+					<div class="text">
+						<strong>Pay As You Go</strong>
+						Flexible payment options available.
+					</div>
+				</li>
+				<li class="left-list">
+					<div class="div3-icons list">
+					<i class="fa-solid fa-sack-dollar"></i></div>
+					<div class="text">
+						<strong>Industry Lowest Prices</strong>
+						Best value for pet parents.
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="image-box">
+			<img id="changing-image" src="images/happiness-training1.png" alt="Changing Image">
+		</div>
+		<div class="blocks-div3">
+			<ul>
+				<li>
+					<div class="div3-icons list">
+					<i class="fa-solid fa-certificate"></i></div>
+					<div class="text">
+						<strong>Verified Pet Masters</strong>
+						Trained and certified professionals.
+					</div>
+				</li>
+				<li>
+					<div class="div3-icons list">
+					<i class="fa-solid fa-box-archive"></i></div>
+					<div class="text">
+						<strong>Customized Packages</strong>
+						Tailored to your pet's needs.
+					</div>
+				</li>
+				<li>
+					<div class="div3-icons">
+					<i class="fa-solid fa-comments"></i></div>
+					<div class="text">
+						<strong>Mobile App Service Tracking</strong>
+						Manage bookings and payments easily.
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<script>
+	const images = ["images/happiness-training1.png", "images/happiness-training2.png", "images/happiness-training3.png", "images/happiness-training4.png"];
+	let index = 0;
+
+	function changeImage() {
+		index = (index + 1) % images.length;
+		document.getElementById("changing-image").src = images[index];
+	}
+
+	setInterval(changeImage, 3000);
+</script>
+
+<!-- ------------------ FAQs (Frequently Asked Questions) ------------------- -->
+
+<div class="tech-block-faq">
+    <div class="faq-container">
+        <h1 class="faq-header">Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">
+                How long does it take for my doggy to learn obedience?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                The dogs with daily sessions will learn obedience within 4 weeks post completion of course. For those attending bi-weekly training sessions it will take 9 weeks.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				How much time does it take to train a dog?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                The duration of dog protection training varies depending on the dog and the level of training. They are exposed to various sounds environments and may take months of training.
+            </div>
+        </div>
+        <div class="faq-item"> 
+            <div class="faq-question">
+                What are the timings for the pickup and drop at the doggy care-the Petopia?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Our pet boarding services are open round the clock, 24X7. At Petopia, the designated time schedule for pick up and drop ranges between — am to —pm. If you want to pick up your dog outside the designated hours, give us a call beforehand so that your doggy is ready for pickup when you arrive at the facility.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+				What are the reasons for erratic behaviours in dogs?
+                <span class="faq-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="faq-answer">
+                Health issues like arthritis, sore teeth, epilepsy/seizures, digestive issues, yeast infections and cancer are some of the reasons for erratic behaviours in dogs.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // JavaScript to handle FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+
+<!-- ------------------------------------ FOOTER ------------------------------------- -->
+
+<footer>
+	<div class="footer1">
+		<div class="divf1">
+			<ul>
+			<li><h3>PETOPIA</h3></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Career</a></li>
+			<li><a href="#">Support</a></li>
+			<li><a href="PetShopping.html">Online Pet Shop</a></li>
+			<li><a href="#">Customer reviews</a></li>
+			<li><a href="ReportAbuse.html">Report Animal Abuse</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+		</div>
+
+		<div class="divf2">
+			<ul>
+			<li><h3>SERVICES</h3></li>
+			<li><a href="PetGrooming.html">Pet Grooming</a></li>
+			<li><a href="PetTraining.html">Dog training</a></li>
+			<li><a href="PetWalking.html">Dog Walking</a></li>
+			<li><a href="PetWalking.html">Pet Sitting</a></li>
+			<li><a href="PetHealth.html">Pet Insurance</a></li>
+			<li><a href="PetAdoption.html">Pet Adoption</a></li>
+			<li><a href="#">Courses</a></li>
+			<li><a href="PetHealth.html">Online Vet Consultation</a></li>
+			</ul>
+		</div>
+
+		<div class="divf3">
+			<ul>
+			<li><h3>POLICIES</h3></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Refund Policy</a></li>
+			<li><a href="#">Cancellation Policy</a></li>
+			<li><a href="#">Shipping Policy</a></li>
+			<li><a href="#">Terms & Conditions</a></li>
+		    </ul>
+		</div>
+		<div class="divf4">
+		</div>
+		
+	</div>
+
+	<div class="footer2">
+        <p>&copy; 2022 Pet Services. All rights reserved.</p>
+    </div>
+    </footer>	
+</body>
+</html>

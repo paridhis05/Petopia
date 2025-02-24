@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PETOPIA</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="petcss.css">
+</head>
+<body>
+	
+<!-- ------------------------ FIRST-NAVIGATION BAR ---------------------------- -->
+	
+	<nav class="navbar1">
+
+<!-- ------------------  SEARCH BOX -------------------- -->
+
+	<div class="navbar1-left">
+		<div class="search-box">
+			    <input type="text" placeholder="What are you looking for?">
+                <i class="fa-solid fa-magnifying-glass"></i>  
+        </div>
+	</div>
+
+<!-- ------------------  LOGO -------------------- -->
+
+	<div class="navbar1-center">
+		<a href="pet.html"><img src="images\PetopiaLogo.png" class="logo"></a>
+
+	</div>
+
+<!-- ------------------ SUPPORT AND CART BUTTON -------------------- -->
+
+	<div class="navbar1-right">
+		
+		<div class="nav-right-button">
+           <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+           <a href="#" class="support"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+	</div>
+
+	</nav>
+
+<!-- ------------------  SECOND-NAVIGATION BAR -------------------- -->
+
+	<nav class="navbar2">
+
+		<ul>
+            <li><a href="pet.html" class="active-link"> <span> Home</span> </a></li>
+            <li><a href="PetAdoption.html"><span> Pets</span></a></li>
+            <li><a href="PetShopping.html"><span> Accessories</span>  </a></li>
+            <li><a href="#"><span> Services</span> </a></li>
+            <li><a href="ReportAbuse.html"><span> Rescue a pet</span> </a></li>
+            <li><a href="#"><span> About us</span></a></li>
+        </ul>
+		
+	</nav>
+
+<!-- ---------------------------- Content of the Home Page ------------------------------------------- -->
+
+<!-- ------------------  SLIDESHOW -------------------- -->
+<div class="div1">
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+	  <div class="hero-section" style="background-color: #c7e099;">
+		<div class="text-content">
+			<h1>High Quality Pet Food</h1>
+			<p>
+				"Fuel Their Happiness with High-Quality Nutrition 🐾✨ Because Your Pets Deserve the Best!"
+			</p>
+			<button class="cta-button"><a href="PetShopping.html" style="color: white;">Shop Now</a></button>
+		</div>
+		<div class="image-content">
+			<img src="images/slide3.png" alt="Pets">
+		</div>
+	</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="hero-section" style="background-color: #99d2d2;">
+			<div class="text-content">
+				<h1>We care for your pet</h1>
+				<p>
+					"Compassionate Care, Tail-Wagging Happiness 🐾❤️ Let Our Loving Sitters Pamper Your Pet!"
+				</p>
+				<button class="cta-button"><a href="PetGrooming.html" style="color: white;">Learn More</a></button>
+			</div>
+			<div class="image-content">
+				<img src="images/slide1.png" alt="Pets">
+			</div>
+		</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="hero-section" style="background-color: #e0e399;">
+			<div class="text-content">
+				<h1>Not only people need a house</h1>
+				<p>
+					If you are thinking of bringing a cat and dog into a house, you should make sure that 
+					all are comfortable. We should also train your dog and cat.
+				</p>
+				<button class="cta-button"><a href="PetAdoption.html" style="color: white;">Make a Pet</a></button>
+			</div>
+			<div class="image-content">
+				<img src="images/slide2.png" alt="Pets">
+			</div>
+		</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="hero-section" style="background-color: #7faed2;">
+			<div class="text-content">
+				<h1>Online consulting</h1>
+				<p>
+					"Expert Advice at Your Fingertips 💻🐾 Connect with Our Online Pet Consultants Anytime, Anywhere!"
+				</p>
+				<button class="cta-button"><a href="PetHealth.html" style="color: white;">Learn More</a></button>
+			</div>
+			<div class="image-content">
+				<img src="images/slide4.png" alt="Pets">
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	<br>
+	
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span>
+	</div>
+	
+	<script>
+	let slideIndex = 0;
+	showSlides();
+	
+	function showSlides() {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 4000); // Change image every 2 seconds
+	}
+	</script>
+</div>
+<!-- -------------------------- What We Offer Section ----------------- -->
+
+<div class="div2"> 
+	<h1>WHAT WE OFFER</h1>	
+	<div class="services">	
+		<div class="box box1">		
+			<div class="inbox1"><img src="images/grooming.png" width="100%" height="100%"></div>
+			<div class="inbox2 groom"><a href="PetGrooming.html"><h3>GROOMING</h3></a></div>
+		</div>
+	    <div class="box box2">
+	    	<div class="inbox1"><img src="images/shop.png" width="100%" height="100%"></div>
+	    	<div class="inbox2 shop"><a href="PetShopping.html"><h3>SHOPPING</h3></a></div>
+	    </div>
+		<div class="box box3">
+	    	<div class="inbox1"><img src="images/walking.png" width="100%" height="100%"></div>
+	    	<div class="inbox2 walk"><a href="PetWalking.html" ><h3>WALKING</h3></a></div>
+		</div>
+	    <div class="box box4">
+	    	<div class="inbox1"><img src="images/training.png" width="100%" height="100%"></div>
+		    <div class="inbox2 train" ><a href="PetTraining.html"><h3>TRAINING</h3></a></div>
+		</div>
+	    <div class="box box5">
+	    	<div class="inbox1"><img src="images/health.png" width="100%" height="100%"></div>
+		    <div class="inbox2 health"><a href="PetHealth.html"><h3>HEALTH CARE</h3></a></div>
+		</div>
+	    <div class="box box6">
+	    	<div class="inbox1"><img src="images/adoption.png" width="100%" height="100%"></div>
+		    <div class="inbox2 adobt"><a href="PetAdoption.html" ><h3>ADOPTION</h3></a></div>
+		</div>
+	</div>
+</div>
+
+<!-- ---------------------- Offers Section -------------------- -->
+
+	<div class="div3">
+		
+		<h1>OFFERS</h1>
+		<div class="in-div3">
+		<div class="grid-container">
+			<div class="grid-item">
+				<img src="images/offer1.jpg" alt="Image 1">
+			</div>
+			<div class="grid-item">
+				<img src="images/offer2.jpg" alt="Image 2">
+			</div>
+			<div class="grid-item">
+				<img src="images/offer3.jpg" alt="Image 3">
+			</div>
+			<div class="grid-item">
+				<img src="images/offer4.jpg" alt="Image 4">
+			</div>
+			<div class="grid-item">
+				<img src="images/offer5.jpg" alt="Image 5">
+			</div>
+			<div class="grid-item">
+				<img src="images/offer6.jpg" alt="Image 5">
+			</div>
+		</div>
+	</div>
+	</div>
+
+<!-- ----------------------- Choose Pet section ----------------------- -->
+	<div class="divnext3">
+	<div class="choosepet-container">
+		<h1>What pets do you have?</h1>
+		<p>Find out why Trusted Housesitters could be the best pet care choice for you and your pets.</p>
+	
+		<div class="grid">
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-dog"></i></span> Dogs
+			</button>
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-cat"></i></span> Cats
+			</button>
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-fish"></i></span> Fish
+			</button>
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-dove"></i></span> Birds
+			</button>
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-cow"></i></span> Livestock
+			</button>
+			<button class="pet-button">
+				<span class="icon"><i class="fa-solid fa-frog"></i></span> Small pets
+			</button>
+		</div>
+	
+		<button class="start-button">Get started <i class="fa-solid fa-angle-right"></i></button>
+	</div>
+	</div>
+<!-- ----------------------- Brands section ----------------------- -->
+
+	<div class="div4">
+		<div class="brand"><img src="images\royal.png"></div>
+		<div class="brand"><img src="images\drools.png"></div>
+		<div class="brand"><img src="images\pedigree.png"></div>
+		<div class="brand"><img src="images\whiskas.png"></div>
+		<div class="brand"><img src="images\himalaya.png"></div>
+	</div>
+
+<!-- ------------------------- Why Choose Us Section ---------------------- -->
+<!-- 
+	<div class="div5">
+		<h1>WHY CHOOSE US</h1>
+		<div class="wcu">
+
+			<div class="wcu1">
+
+				<div class="wcupoint wcupoint1">
+					<div class="pointl pp1"><p>Range of Services</p></div>
+				<div class="wcucirl wcucirl1"></div></div>
+
+				<div class="wcupoint wcupoint2">
+					<div class="pointl pp2"><p>Pet Safety and Welfare</p></div>
+				<div class="wcucirl wcucirl2"></div></div>
+
+				<div class="wcupoint wcupoint3">
+					<div class="pointl pp3"><p>Affordable, personalized pet care</p></div>
+				<div class="wcucirl wcucirl3"></div></div>
+			</div>
+
+			<div class="wcu2">
+			    <img src="images\choose.jpg" height="500px">
+		    </div>
+
+		    <div class="wcu3">
+
+		    	<div class="wcupoint wcupoint4">
+					<div class="pointr pp4"><p>Trust and Credibility</p></div>
+				<div class="wcucirr wcucirr4"></div></div>
+
+				<div class="wcupoint wcupoint5">
+					<div class="pointr pp5"><p>Pet-Friendly Policies</p></div>
+				<div class="wcucirr wcucirr5"></div></div>
+
+				<div class="wcupoint wcupoint6">
+					<div class="pointr pp6"><p>Background verified and certified hosts</p></div>
+				<div class="wcucirr wcucirr6"></div></div>
+		    	
+		    </div>
+		
+
+		</div>
+	</div> -->
+
+<!-- ---------------------- Appointment Form Section ------------------------- -->
+
+<div class="div6">		
+	<div class="appointment1"><h1>MAKE AN APPOINTMENT</h1></div>
+	<div class="appointment2">
+    <form action="#">
+        <div class="form first">
+        	<div class="fields">
+                    <div class="input-field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Enter mobile number" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Pet Category</label>
+                        <select required>
+                            <option disabled selected>Select Pet Category</option>
+                            <option>Dog</option>
+                            <option>Cat</option>
+                            <option>Rabbit</option>
+                            <option>Turtle</option>
+                            <option>Fish</option>
+                            <option>Bird</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Service Type</label>
+                        <select required>
+                            <option disabled selected>Service Type</option>
+                            <option>Pet Grooming</option>
+                            <option>Pet Sitting</option>
+                            <option>Pet Walking</option>
+                            <option>Pet Insurance</option>
+                            <option>Pet Training</option>
+                            <option>Pet Adobtion</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Date and Time</label>
+                        <input type="date" placeholder="Enter date and time" required>
+                    </div>
+
+                    <div class="input-field" style="width: 100%;">
+                    	<label>Address</label>
+                        <textarea rows="2" cols="10" required></textarea>
+                    </div>
+                    <div class="input-field" >
+                    	<label>Additional Note</label>
+                        <textarea rows="2" cols="10" required>
+                        </textarea>
+                    </div>
+            </div>
+		    <button class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+            </button>                    
+            </div> 
+        </div>
+    </form>
+</div>
+	   
+	    
+	</div>
+</div>
+
+<!-- ------------------------------------ FOOTER ------------------------------------- -->
+
+<footer>
+	<div class="footer1">
+		<div class="divf1">
+			<ul>
+			<li><h3>PETOPIA</h3></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Career</a></li>
+			<li><a href="#">Support</a></li>
+			<li><a href="PetShopping.html">Online Pet Shop</a></li>
+			<li><a href="#">Customer reviews</a></li>
+			<li><a href="ReportAbuse.html">Report Animal Abuse</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+		</div>
+
+		<div class="divf2">
+			<ul>
+			<li><h3>SERVICES</h3></li>
+			<li><a href="PetGrooming.html">Pet Grooming</a></li>
+			<li><a href="PetTraining.html">Dog training</a></li>
+			<li><a href="PetWalking.html">Dog Walking</a></li>
+			<li><a href="PetWalking.html">Pet Sitting</a></li>
+			<li><a href="PetHealth.html">Pet Insurance</a></li>
+			<li><a href="PetAdoption.html">Pet Adoption</a></li>
+			<li><a href="#">Courses</a></li>
+			<li><a href="PetHealth.html">Online Vet Consultation</a></li>
+			</ul>
+		</div>
+
+		<div class="divf3">
+			<ul>
+			<li><h3>POLICIES</h3></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Refund Policy</a></li>
+			<li><a href="#">Cancellation Policy</a></li>
+			<li><a href="#">Shipping Policy</a></li>
+			<li><a href="#">Terms & Conditions</a></li>
+		    </ul>
+		</div>
+		<div class="divf4">
+		</div>
+		
+	</div>
+
+	<div class="footer2">
+        <p>&copy; 2022 Pet Services. All rights reserved.</p>
+    </div>
+    </footer>	
+</body>
+</html>
