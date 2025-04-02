@@ -1,189 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Explore Pet Training</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="petcss.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    .pet-explore {
-      text-align: center;
-      padding: 40px 20px;
-    }
+        .container {
+            margin-top: 80px; /* Prevent overlap with navbar */
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-    .pet-explore h2 {
-      font-size: 44px;
-      color: #4e1489;
-      margin-bottom: 40px;
-    }
+        .left-section {
+            flex: 1;
+            padding: 40px;
+        }
 
-    .scroll-container {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
+        .password-container {
+            position: relative;
+        }
 
-    .explore-block {
-      /* max-width: 1300px; */
-      display: flex;
-      align-items: center;
-      gap: 3%;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -ms-overflow-style: none; 
-      scrollbar-width: none;  
-    }
-    .explore-block::-webkit-scrollbar {
-      display: none;      
-    }
+        .password-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-    .block {
-      flex: 0 0 auto;    
-      margin-top: 10px;
-      background: #edf8ff;
-      color: #277fa7;
-      width: 10%;
-      min-width: 140px;  
-      height: auto;
-      padding: 15px;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
+        .password-container span {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            color: #004d40;
+        }
 
-    .block img {
-      width: 70px;
-      object-fit: cover;
-      margin: 10px;
-    }
+        .password-container span i {
+            font-size: 18px;
+        }
 
-    .block h3 {
-      font-size: 16px;
-      margin: 5px 0;
-      padding: 5px 12%;
-    }
+        .right-section {
+            flex: 1;
+            background-color: #e8f5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-    .scroll-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #ffffff;
-      color: #661d69;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
+        .right-section img {
+            width: 80%;
+            max-width: 300px;
+        }
 
-    .scroll-btn:hover {
-      background-color: #3b0e68;
-    }
-
-    .scroll-btn.left {
-      left: 0;
-    }
-
-    .scroll-btn.right {
-      right: 0;
-    }
-
-    .book-now-btn {
-      background-color: #ff9f43;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 18px 35px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 50px;
-    }
-    .book-now-btn:hover {
-      background-color: #e08f3c;
-    }
-
-    @media (max-width: 768px) {
-      .block {
-        width: 30%;
-        min-width: 120px;
-      }
-      .pet-explore h2 {
-        font-size: 28px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 95%;
+            }
+            .right-section {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- ------------------ EXPLORE PET WALKING OPTION  ------------------- -->
-  <div class="pet-explore">
-    <h2>Receive Reliable Guidance for Your Pet's Health Needs</h2>
-    <div class="scroll-container">
-      <button class="scroll-btn left" onclick="scrollLeft()" style="margin-right:50px;"><i class="fa-solid fa-angle-left"></i></button>
-      <div class="explore-block" id="scrollable">
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore1.png" alt="One Time Walk">
-          <h3>General Checkup</h3>
+    <nav class="navbar1">
+        <div class="navbar1-left">
+            <div class="search-box">
+                <input type="text" placeholder="What are you looking for?">
+                <i class="fa-solid fa-magnifying-glass"></i>  
+            </div>
         </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore2.png" alt="Two Time Walk">
-          <h3>New Pet Parent</h3>
+        <div class="navbar1-center">
+            <a href="pet.html"><img src="images/PetopiaLogo.png" class="logo"></a>
         </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore3.png" alt="Three Time Walk">
-          <h3>Skin issues</h3>
+        <div class="navbar1-right">
+            <div class="nav-right-button">
+               <a href="#" class="support"><i class="fa-solid fa-headset"></i></a>
+               <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+               <a href="Login.html" class="account"><i class="fa-solid fa-user"></i></a>
+            </div>
         </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore4.png" alt="Per Day Walk">
-          <h3>Digestive issues</h3>
+    </nav>
+
+    <div class="container">
+        <div class="left-section">
+            <h2>Log in</h2>
+            <p>Welcome back! We were hoping we'd see you again...</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="input-field" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group password-container">
+                    <label>Password</label>
+                    <input type="password" class="input-field" id="password" placeholder="Enter your password" required>
+                    <span onclick="togglePassword()"><i class="fa-solid fa-eye"></i></span>
+                </div>
+
+                <button type="submit" class="login-btn">Log in</button>
+                <a href="#" class="forgot-password">Forgotten password?</a>
+            </form>
         </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore5.png" alt="Weekly Walk">
-          <h3>Paws & Limbs</h3>
+
+        <div class="right-section">
+            <img src="https://via.placeholder.com/300x300?text=Illustration" alt="Illustration">
         </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore6.png" alt="Monthly Walk">
-          <h3>Dental issues</h3>
-        </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore1.png" alt="One Time Walk">
-          <h3>Ears issues</h3>
-        </div>
-        <div class="block" style="background-color: #faf6ff;">
-          <img src="images/walking-explore2.png" alt="Two Time Walk">
-          <h3>Eye issues</h3>
-        </div>
-      </div>
-      <button class="scroll-btn right" onclick="scrollRight()"><i class="fa-solid fa-angle-right"></i></button>
     </div>
-    <button class="book-now-btn">Book Now</button>
-  </div>
-  
 
-  <script>
-    function scrollLeft() {
-      const container = document.getElementById('scrollable');
-      container.scrollBy({ left: -200, behavior: 'smooth' });
-    }
+    <button class="help-btn">
+        <span><i class="fa-solid fa-headset"></i></span> Help
+    </button>
 
-    function scrollRight() {
-      const container = document.getElementById('scrollable');
-      container.scrollBy({ left: 200, behavior: 'smooth' });
-    }
-  </script>
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("password");
+            let icon = document.querySelector(".password-container span i");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
 </body>
 </html>
